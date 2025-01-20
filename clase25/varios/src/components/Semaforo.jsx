@@ -5,7 +5,6 @@ import { useState } from "react";
 const Semaforo = () => {
   const colors = ["red", "yellow", "green"];
   const [color, setColor] = useState("grey");
-  const [modo, setModo] = useState("dark");
 
   const cambiarColor = (item) => {
     setColor(item);
@@ -13,7 +12,7 @@ const Semaforo = () => {
 
   return (
     <>
-      <div className={"App" + { modo }}>
+      <div className="App">
         {colors.map((item, index) => {
           return (
             <div key={index}>
